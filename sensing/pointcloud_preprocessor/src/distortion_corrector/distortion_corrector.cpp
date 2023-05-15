@@ -264,6 +264,7 @@ bool DistortionCorrectorComponent::undistortPointCloud(
                           ? std::end(*angular_velocity_queue_ptr) - 1
                           : angular_velocity_it;  
 
+  const tf2::Transform tf2_base_link_to_sensor_inv{tf2_base_link_to_sensor.inverse()};
   // For performance, do not instantiate `rclcpp::Time` inside of the for-loop
   // double twist_stamp = rclcpp::Time(twist_it->header.stamp).seconds();
   // double imu_stamp = rclcpp::Time(imu_it->header.stamp).seconds();
