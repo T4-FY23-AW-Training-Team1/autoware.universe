@@ -9,5 +9,6 @@
 
   <!-- sensors -->
   <xacro:property name="sensor_model_property" value="$(arg sensor_model)"/>
-  <xacro:include filename="$(find ${sensor_model_property}_description)/urdf/sensors.xacro"/>
+  <xacro:include filename="$(find ${sensor_model_property}_description)/urdf/calib_sensors.xacro"/>
+  <!-- <xacro:include filename="$(find ${sensor_model_property}_description)/urdf/sensors.xacro"/> -->
 </robot>
